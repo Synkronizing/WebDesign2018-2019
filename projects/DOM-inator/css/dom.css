@@ -1,0 +1,24 @@
+
+body{
+    background-image:url(../images/background.jpg);
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome{
+    font-family: 'Space Mono', monospace;
+    padding-left:20px;
+    color:#6d0277;
+}
+
+/*
+font-family: 'Space Mono', monospace;
+font-family: 'Concert One', cursive;
+font-family: 'Tillana', cursive;
+font-family: 'Asul', sans-serif;
+font-family: 'Alike Angular', serif;
+font-family: 'Work Sans', sans-serif;
+font-family: 'Neuton', serif;
+font-family: 'Eczar', serif;
+*/
