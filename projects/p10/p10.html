@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua|Abril+Fatface|Acme|Anton|Bitter|Bree+Serif|Chicle|Fjalla+One|Josefin+Sans|Lobster|Merriweather|Notable|PT+Serif|Pacifico|Poppins"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../../css/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/p1.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="../../js/everything.js"></script>
+    <title>RegEx Crossword</title>
+  </head>
+
+  <body class="mount">
+    <!-- Sidebar -->
+
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+      <a href="http://westada.tech/b2/mrmb1b2" class="w3-bar-item w3-button">Mr. M</a>
+      <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
+    </div>
+    <button id="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+
+    <div class="grid-container">
+      <div class="item1 mount">
+        <h1 class="title">RegEx Crossword Explanation </h1>
+      </div>
+
+
+      <div class="item2 violin">
+        <h1 class="sub-title">RegEx Crossword</h1>
+        <a href="../../images/p10Images/regex_crossword.png"><img src="../../images/p10Images/regex_crossword.png" alt=""></a>
+        
+
+      </div>
+      <div class="item3 flower">
+        <h1 class="title flip">Top</h1>
+        <div class="open">
+        <h2 class="list">".*[GAF]*" is looking for 0 or more characters followed by 0 or more G,A, and/or Fs</h2>
+        <h2 class="list">"(P|ET|O|TEA)*" is looking an 0 or more P, ET, O, TEA. | means or in parentheses</h2>
+        <h2 class="list">"[RUSH]+" looks for one or more of any of the characters in the brackets R, U, S, H</h2>
+      </div>
+      </div>
+      <div class="item4 mount">
+        <h1 class="title flip2">Bottom</h1>
+        <div class="open2">
+          <h2 class="list">"(NF|FA|A|FN)+" One or more NF, FA, A, or FN</h2>
+          <h2 class="list">".*(A|E|I).*" 0 or more characters followed by either A, E, or I, then followed with 0 or more characters</h2>
+          <h2 class="list">"[SUPER]*" 0 or more characters that are S, U, P, E, or R</h2>
+      </div>
+      </div>
+      <div class="item5 comp">
+          <h1 class="title flip3">Left</h1>
+          <div class="open3">
+            <h2 class="list">"[ONE]*[SKA]" 0 or more O, N, E followed by an S, K, or A</h2>
+            <h2 class="list">".*(RE|ER)" 0 or more characters followed by RE or ER</h2>
+            <h2 class="list">"A+[TUB]*" one or more As followed with T, U, or B</h2>
+        </div>
+        </div>
+        <div class="item6 violin"style="margin-bottom:20px;">
+            <h1 class="title flip4">Right</h1>
+            <div class="open4">
+              <h2 class="list">".*(O|S)*" 0 or more characters followed by 0 or more of O or S</h2>
+              <h2 class="list">"[^GOA]*" 0 or more characters that aren't G, O, or A</h2>
+              <h2 class="list">"[STUPA]+" 1 or more characters that are S, T, U, P, or A</h2>
+          </div>
+          </div>
+        </div>
+  </body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua|Abril+Fatface|Acme|Anton|Bitter|Bree+Serif|Chicle|Fjalla+One|Josefin+Sans|Lobster|Merriweather|Notable|PT+Serif|Pacifico|Poppins"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/w3.css">
+  <link rel="stylesheet" type="text/css" href="../../css/p1.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../../js/everything.js"></script>
+  <title>Node MySQL joins</title>
+</head>
+
+<body class="mount">
+  <!-- Sidebar -->
+
+  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+    <a href="http://westada.tech/b2/mrmb1b2" class="w3-bar-item w3-button">Mr. M</a>
+    <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
+  </div>
+  <button id="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+
+  <div class="grid-container">
+    <div class="item1 mount">
+      <h1 class="title">Node MySQL Joins</h1>
+    </div>
+
+
+    <div class="item2 violin">
+      <h1 class="sub-title flip">Inner Join</h1>
+      <div class="open">
+      <a href="../../images/p5Images/join1.png"><img src="../../images/p5Images/join1.png" alt=""></a>
+      <h2 class="list">This is our first join that shows all the customers that own a horse and the name of the horse</h2>
+      <a href="../../images/p5Images/join2.png"><img src="../../images/p5Images/join2.png" alt=""></a>
+      <h2 class="list">This sql is much more complicated, it shows all customers that are from Idaho that own a female
+        cat or dog. It also show dogs then cats.</h2>
+      <a href="../../images/p5Images/base_node.png"><img src="../../images/p5Images/base_node.png" alt=""></a>
+      <h2 class="list">This is the base Node needed to execute sql in 'b2VetOffice'. Just make sure to put the sql code
+        in the variable sql quotes</h2>
+      <a href="../../images/p5Images/node_join.png"><img src="../../images/p5Images/node_join.png" alt=""></a>
+      <h2 class="list">This is Node MySQL inner join with two tables.</h2>
+      <a href="../../images/p5Images/join_show.png"><img src="../../images/p5Images/join_show.png" alt=""></a>
+      <h2 class="list">Your terminal should look something like this after executing your node.js for two tables</h2>
+    </div>
+
+    </div>
+    <div class="item3 flower">
+      <h1 class="sub-title flip2" style="margin-top:40px;">Three Table Inner Joins</h1>
+      <div class="open2">
+      <a href="../../images/p5Images/three_join.png"><img src="../../images/p5Images/three_join.png" alt=""></a>
+      <h2 class="list">This sql uses a new table called 'diagnosis' which can be plugged into the same Node base as
+        before</h2>
+      </div>
+    </div>
+    <div class="item4 comp"style="margin-bottom:20px;">
+      <h1 class="sub-title flip3" style="margin-top:40px;">The database ERD</h1>
+      <div class="open3">
+      <a href="../../images/p5Images/b2VetOfficeERD.png"><img src="../../images/p5Images/b2VetOfficeERD.png" alt=""></a>
+      <h2 class="list">The customer table is the main table.</h2>
+      <h2 class="list">The crow feet connect the tables together</h2>
+      <h2 class="list">Not only that, but it allows for one customer to own more than one pet and allows for each pet
+        have multiple diagnosises.</h2>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

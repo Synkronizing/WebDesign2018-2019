@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua|Abril+Fatface|Acme|Anton|Bitter|Bree+Serif|Chicle|Fjalla+One|Josefin+Sans|Lobster|Merriweather|Notable|PT+Serif|Pacifico|Poppins"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/w3.css">
+  <link rel="stylesheet" type="text/css" href="../../css/p1.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../../js/everything.js"></script>
+  <title>MySQL and More</title>
+</head>
+
+<body class="mount">
+  <!-- Sidebar -->
+
+  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+    <a href="http://westada.tech/b2/mrmb1b2" class="w3-bar-item w3-button">Mr. M</a>
+    <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
+  </div>
+  <button id="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+
+  <div class="grid-container">
+    <div class="item1 mount">
+      <h1 class="title">Installing MySQL and more!</h1>
+    </div>
+
+
+    <div class="item2 violin">
+      <h1 class="sub-title flip">MySQL</h1>
+      <div class="open">
+      <h2 class="list">1. Make sure you have apache2, if not do "sudo apt install apache2"</h2>
+      <h2 class="list">2. Then do a "sudo apt install mysql-server"</h2>
+      <a href="../../images/p2Images/mysqlInstall.png"><img src="../../images/p2Images/mysqlInstall.png" alt="MySQL"></a>
+      <h2 class="list">3. Now do "sudo mysql_secure_installation" make sure to make a password you remember or just do
+        'toor'</h2>
+      <h2 class="list">4. Finally enter "sudo mysql" then you will enter "ALTER USER 'root'@'localhost' IDENTIFIED WITH
+        mysql_native_password BY 'toor';"
+        to be able to enter mysql correctly("mysql -u root -p")</h2>
+      </div>
+    </div>
+    <div class="item4 flower">
+      <h1 class="sub-title" style="margin-top:40px;">MyPHPAdmin Install</h1>
+      <h2 class="list">Do this after downloading MySQL</h2>
+      <h2 class="list">1. do sudo apt install phpmyadmin </h2>
+      <a href="../../images/p2Images/php.png"><img src="../../images/p2Images/php.png" alt="myphpadmin"></a>
+      <h2 class="list">2. make sure to hit tab when hovering over apache2 (it should have a "*" in the box)</h2>
+      <h2 class="list">3. Click "yes"</h2>
+      <h2 class="list">4. type your password in for MySQL</h2>
+    </div>
+    <div class="item3 comp"style="margin-bottom:20px;">
+      <h1 class="sub-title flip2" style="margin-top:40px;">MySQL Workbench</h1>
+      <div class="open2">
+      <h2 class="list">Very simple </h2>
+      <h2 class="list">1. All you need to do is go to the software manager</h2>
+      <h2 class="list">type in mysql workbench and download it through there</h2>
+      <a href="../../images/p2Images/workbench.png"><img src="../../images/p2Images/workbench.png" alt=""></a>
+    </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

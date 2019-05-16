@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learning React</title>
+    <script src="http://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="http://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="http://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">//react code will go here
+        class App extends React.Component {
+            render(){
+                return <h1> Hello World! This is Josh S I can't wait to learn more react</h1>
+
+            }
+        }
+        ReactDOM.render(<App/>,document.getElementById('root'))
+    
+    </script>
+</body>
+</html>

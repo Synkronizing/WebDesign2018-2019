@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua|Abril+Fatface|Acme|Anton|Bitter|Bree+Serif|Chicle|Fjalla+One|Josefin+Sans|Lobster|Merriweather|Notable|PT+Serif|Pacifico|Poppins"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/w3.css">
+  <link rel="stylesheet" type="text/css" href="../../css/p1.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+    
+      <!-- Load React API -->
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- Load Babel Compiler -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+  <!-- Load our React component. -->
+  <script type="text/babel" src="js/index.js"></script>
+  <script src="../../js/everything.js"></script>
+  <title>React</title>
+</head>
+
+<body class="mount">
+  <!-- Sidebar -->
+
+  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+    <a href="http://westada.tech/b2/mrmb1b2" class="w3-bar-item w3-button">Mr. M</a>
+    <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
+  </div>
+  <button id="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+
+  <div class="grid-container">
+    <div class="item1 mount">
+      <h1 class="title">The Beginning of React</h1>
+    </div>
+
+
+    <div class="item2 violin">
+      <h1 class="sub-title flip">SandBox</h1>
+      <div class="open">
+      <h2 class="list">We used a website called CodeSandBox similar to Visual Studio Code</h2>
+      <a href="images/react_box.png"><img src="images/react_box.png" alt=""></a>
+
+    </div>
+    </div>
+
+    <div class="item3 comp">
+      <h1 class="sub-title flip2" style="margin-top:40px;">Basics of React js</h1>
+      <div class="open2">
+      <a href="images/version.png"><img src="images/version.png" alt=""></a>
+      <h2 class="list">This code uses the variable 'version' found on the bottom of the code to display "invalid version" on the page with ternary operators</h2>
+      <a href="images/Add.png"><img src="images/Add.png" alt=""></a>
+      <h2 class="list">This code adds two integers together in the app </h2>
+      <a href="images/Layout.png"><img src="images/Layout.png" alt=""></a>
+      <h2 class="list">A layout was created and when the Layout constant was used a header and footer were added </h2>
+    </div>
+
+    </div>
+    <div class="item4 flower">
+      <h1 class="sub-title flip3" style="margin-top:40px;">Dad Jokes</h1>
+      <div class="open3">
+      <h2 class="list">We created a page with a button displaying random dad jokes when clicked</h2>
+      <a href="images/jokes.png"><img src="images/jokes.png" alt=""></a>
+      <h2 class="list">First we displayed the joke in the console through the App function, it fetches a random joke from "icanhazdadjoke.com" then the joke is sent to the console log.</h2>
+      <a href="images/joke_display.png"><img src="images/joke_display.png" alt=""></a>
+      <h2 class="list">Then we made an App class that extends the React.Component. 
+        When the button is clicked telljoke() runs and it sets the state of joke to a random joke.
+        then the p tag displays the joke on the page.
+      </h2>
+      <h1 class="sub-title">Dad Jokes Search Bar</h1>
+      <h2 class="list">Created new js file called searchForm to make the search bar.</h2>
+      <a href="images/search_form.png"><img src="images/search_form.png" alt=""></a>
+      <h2 class="list">Then added new code to index.js</h2>
+      <a href="images/React_class.png"><img src="images/React_class.png" alt=""></a>
+      <h2 class="list">Now the code will search for jokes with the specific searchTerm and will only find a max of 20</h2>
+      <a href="images/render_search.png"><img src="images/render_search.png" alt=""></a>
+      <h2 class="list">When fetching the jokes it will display "Searching for jokes...". 
+        When you click I'm feeling lucky it searches for only the first joke based on the search term.</h2>
+      <a href="images/search_Jokes.png"><img src="images/search_Jokes.png" alt=""></a>
+    </div>
+    
+  </div>
+  <div class="item5 violin"style="margin-bottom:20px;">
+    <div id="dadJokes"></div>
+  </div>
+</div>
+
+</body>
+
+</html>

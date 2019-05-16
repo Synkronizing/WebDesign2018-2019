@@ -11,7 +11,21 @@ body{
     padding-left:20px;
     color:#6d0277;
 }
-
+.explain{
+  border-radius: 20px;
+  background-color:#eeeeeea9;
+  margin: 20px;
+  padding:10px;
+}
+img {
+  height: 8em;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+a:hover{
+  filter:brightness(110%);
+}
 /*
 font-family: 'Space Mono', monospace;
 font-family: 'Concert One', cursive;

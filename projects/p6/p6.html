@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua|Abril+Fatface|Acme|Anton|Bitter|Bree+Serif|Chicle|Fjalla+One|Josefin+Sans|Lobster|Merriweather|Notable|PT+Serif|Pacifico|Poppins"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../css/w3.css">
+  <link rel="stylesheet" type="text/css" href="../../css/p1.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../../js/everything.js"></script>
+  <title>Starting MongoDB</title>
+</head>
+
+<body class="mount">
+  <!-- Sidebar -->
+
+  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+    <a href="http://westada.tech/b2/mrmb1b2" class="w3-bar-item w3-button">Mr. M</a>
+    <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
+  </div>
+  <button id="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+
+  <div class="grid-container">
+    <div class="item1 mount">
+      <h1 class="title">Starting MongoDB</h1>
+    </div>
+
+
+    <div class="item2 violin">
+      <h1 class="sub-title flip">Creating the Database and Collection</h1>
+      <div class="open">
+      <a href="../../images/p6Images/mongo_create_db.png"><img src="../../images/p6Images/mongo_create_db.png" alt=""></a>
+      <h2 class="list">We first created our database by inserting this code into a node file called
+        "demo_create_mongo_db.js" and executed the code in the terminal</h2>
+      <a href="../../images/p6Images/mongo_create_collection.png"><img src="../../images/p6Images/mongo_create_collection.png"
+          alt=""></a>
+      <h2 class="links">We then created a collection which will store all the data called "customers"</h2>
+    </div>
+
+
+    </div>
+    <div class="item3 flower">
+      <h1 class="sub-title flip2" style="margin-top:40px;">Insert Multiple</h1>
+      <div class="open2">
+      <a href="../../images/p6Images/mongo_insert_multiple.png"><img src="../../images/p6Images/mongo_insert_multiple.png"
+          alt=""></a>
+      <h2 class="list">We added customers to our collection with a name and address</h2>
+    </div>
+    </div>
+    <div class="item4 comp">
+      <h1 class="sub-title flip3" style="margin-top:40px;">Finds</h1>
+      <div class="open3">
+      <a href="../../images/p6Images/mongo_findone.png"><img src="../../images/p6Images/mongo_findone.png" alt=""></a>
+      <h2 class="list">This findone code finds the very first customer in the customers collection and displays it in
+        the terminal like the picture above</h2>
+      <a href="../../images/p6Images/mongo_find.png"><img src="../../images/p6Images/mongo_find.png" alt=""></a>
+      <h2 class="list">This find code displays all customers and their corresponding address and id found in the
+        collection. </h2>
+      <a href="../../images/p6Images/mongo_find_field.png"><img src="../../images/p6Images/mongo_find_field.png" alt=""></a>
+      <h2 class="list">This find code only displays the name and address of each customer</h2>
+    </div>
+  </div>
+    <div class="item5 violin">
+      <h1 class="sub-title flip4"> Starting Command line Mongo</h1>
+      <div class="open4">
+      <h2 class="list">To start mongodb in the command line. First make sure mongodb is started. Then type "mongo" to
+        open up mongodb</h2>
+      <a href="../../images/p6Images/mongostart.png"><img src="../../images/p6Images/mongostart.png" alt=""></a>
+      <h2 class="list">Then to create a new database as you can see I make a database called "testdb", but before it
+        can be visible there needs to be data in the database. I make a customer collection with my first and last
+        name.</h2>
+      <a href="../../images/p6Images/db_and_col.png"><img src="../../images/p6Images/db_and_col.png" alt=""></a>
+      <h2 class="list">As you can see from the image the command "db.customer.find()" finds all the customers in the
+        database you are currently in(testdb) and displays all information on them including their id</h2>
+    </div>
+  </div>
+    <div class="item6 flower">
+      <h1 class="sub-title flip5"> More Command line Mongo</h1>
+      <div class="open5">
+      <a href="../../images/p6Images/set.png"><img src="../../images/p6Images/set.png" alt=""></a>
+      <br>
+      <a href="../../images/p6Images/more_set.png"><img src="../../images/p6Images/more_set.png" alt=""></a>
+      <br>
+      <a href="../../images/p6Images/update.png"><img src="../../images/p6Images/update.png" alt=""></a>
+      <br>
+      <a href="../../images/p6Images/re_stuff.png"><img src="../../images/p6Images/re_stuff.png" alt=""></a>
+      <br>
+      <a href="../../images/p6Images/insert_multiple_command.png"><img src="../../images/p6Images/insert_multiple_command.png"
+          alt=""></a>
+    </div>
+  </div>
+    <div class="item7 comp">
+      <h1 class="sub-title flip6"> More find(), now with a filter</h1>
+      <div class="open6">
+      <a href="../../images/p6Images/create_sweetscomplete.png"><img src="../../images/p6Images/create_sweetscomplete.png"
+          alt=""></a>
+      <a href="../../images/p6Images/find_filter.png"><img src="../../images/p6Images/find_filter.png" alt=""></a>
+      <br>
+      <h2 class="list">First I had to create a new database called sweetscomplete</h2>
+      <h2 class="list">Once that was complete and I had data in it I used the find() containing a filter to find all
+        products with a cost between 2 and 8</h2>
+      <a href="../../images/p6Images/filter_projection.png"><img src="../../images/p6Images/filter_projection.png" alt=""></a>
+    </div>
+  </div>
+    <div class="item8 mount"style="margin-bottom:20px;">
+      <a href="mongodbfirststep.txt">
+        <h2 class="list">Look at all the mongo code directly in the text file here!</h2>
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua|Abril+Fatface|Acme|Anton|Bitter|Bree+Serif|Chicle|Fjalla+One|Josefin+Sans|Lobster|Merriweather|Notable|PT+Serif|Pacifico|Poppins"
+      rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../../css/p1.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="../../js/everything.js"></script>
+    <title>Mongoose Schema</title>
+  </head>
+
+  <body class="mount">
+    <!-- Sidebar -->
+
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+      <a href="http://westada.tech/b2/mrmb1b2" class="w3-bar-item w3-button">Mr. M</a>
+      <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
+    </div>
+    <button id="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+
+    <div class="grid-container">
+      <div class="item1 mount">
+        <h1 class="title">Beginning Mongoose </h1>
+      </div>
+
+
+      <div class="item2 violin">
+        <h1 class="sub-title flip">Creating Mongoose</h1>
+        <div class="open" >
+        <h2 class="list">We first created a folder called mongooseEx with two files called app.js(this is the main file that starts the js through node)</h2>
+        <h2 class="list">We also created a file called Books.model.js this contains the Schema or the format blueprint of the database</h2>
+        <h2 class="list">Then do "npm init" after opening your terminal from the file</h2>
+        <h2 class="list">Do "npm install mongoose body-parser express"</h2>
+        <h2 class="list">Here is what all your files should look like</h2>
+        <a href="../../images/p9Images/create/app.png"><img src="../../images/p9Images/create/app.png" alt=""></a>
+        <br>
+        <a href="../../images/p9Images/create/book_model.png"><img src="../../images/p9Images/create/book_model.png" alt=""></a>
+        <br>
+        <a href="../../images/p9Images/create/package.png"><img src="../../images/p9Images/create/package.png" alt=""></a>
+        <br>
+        <h2 class="list">Make sure your main is the app.js in the package.json file</h2>
+        <h2 class="list">Now you have to create an example db in MongoDB. As you can see in the app.js file your db variable connects to mongodb and connects to a db called example</h2>
+        <h2 class="list">You will need to create a new db in mongodb called example and add some objects under the collection books just copy and paste from a txt file to mongodb</h2>
+        <a href="../../images/p9Images/create/insert.png"><img src="../../images/p9Images/create/insert.png" alt=""></a>
+        <h2 class="list">Once this is done you can do "node app" and run your app.js file in the terminal</h2>
+        <a href="../../images/p9Images/create/app_launch.png"><img src="../../images/p9Images/create/app_launch.png" alt=""></a>
+        <h2 class="list">If you go to "http://localhost:8080/" you will be able to see the test text you sent in app.js</h2>
+        <a href="../../images/p9Images/create/localhost.png"><img src="../../images/p9Images/create/localhost.png" alt=""></a>
+      </div>
+      </div>
+      <div class="item3 flower">
+        <h1 class="sub-title flip2">Seeing the db</h1>
+        <div class="open2">
+        <h2 class="list">We added the code on the bottom to the app.js file</h2>
+        <a href="../../images/p9Images/see_All/books.png"><img src="../../images/p9Images/see_All/books.png" alt=""></a>
+        <h2 class="list">With this if you run the app file with node if you go to "localhost:8080/books" you will see all the book objects</h2> 
+        <a href="../../images/p9Images/see_All/pretty_db.png"><img src="../../images/p9Images/see_All/pretty_db.png" alt=""></a>
+        <h2 class="list">If you open the localhost in firefox you get devtools and the data is automatically prettied</h2>
+      </div>
+      </div>
+      <div class="item4 mount flip3"style="margin-bottom:20px;">
+        <div class="open3">
+        <h1 class="sub-title">findOne Book</h1>
+        <h2 class="list">Now that we can find the entire db now we can find a specific object with the id</h2>
+        <a href="../../images/p9Images/see_One/findOne.png"><img src="../../images/p9Images/see_One/findOne.png" alt=""></a>
+        <h2 class="list">With this code if you enter "localhost:8080/books/'_id'" you will find the object with the specific id.</h2>
+        <a href="../../images/p9Images/see_One/books_id.png"><img src="../../images/p9Images/see_One/books_id.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+  </body>
+
+</html>

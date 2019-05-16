@@ -1,0 +1,208 @@
+.mount {
+  background-image: url(../images/Backgrounds/mountains.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.clockContainer{
+  font-family: 'Roboto Slab', serif;
+  font-size:28px;
+  text-align:left;
+  padding-left:6px;
+  
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: menu;
+}
+
+.item3 {
+  grid-area: main;
+}
+
+.item4 {
+  grid-area: db
+}
+
+.item5 {
+  grid-area: right;
+}
+
+.item6 {
+  grid-area: footer;
+}
+.item7{
+  grid-area:clock;
+}
+.flip, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7{
+  cursor: pointer;
+}
+.flip:hover, .flip2:hover, .flip3:hover, .flip4:hover, .flip5:hover, .flip6:hover, .flip7:hover{
+  color:rgb(255, 255, 255);
+}
+.open, .open2, .open3, .open4, .open5, .open6, .open7{
+  display:none;
+}
+@media screen and (min-width: 768px){
+.grid-container {
+  display: grid;
+  /*
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main db db '
+    'menu footer footer footer footer footer';
+  */
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "menu header header header header header header clock"
+   "menu ... main main main db db db"
+    "menu footer footer  footer footer footer ... ...";
+  grid-gap: 10px;
+  background-image: linear-gradient(to right, rgba(187, 63, 117, 0.76), rgba(247, 255, 102, 0.73));
+  padding: 10px;
+  box-shadow: 20px 10px 5px rgba(4, 52, 56, 0.77);
+  border-radius: 7px;
+  margin:20px;
+  border: solid 3px rgb(150, 42, 42);
+}
+#wa {
+  width: 90%;
+  margin-top: 20%;
+}
+p {
+  font-size: 30px;
+}
+h3 {
+  font-size: 2em;
+}
+#title {
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "header "
+    "menu "
+    "main "
+    "db "
+    "footer ";
+  }
+  #wa{
+    width:40%;
+  }
+  #title {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+.grid-container>div {
+  background-color: rgba(240, 254, 255, 0.81);
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 5px 8px 5px rgba(126, 68, 68, 0.69);
+}
+
+a {
+  text-decoration: none;
+  color: #426065;
+}
+
+
+
+.inspire {
+  text-decoration: none;
+  color: #426065;
+  font-weight: bold;
+}
+
+ul {
+  font-size: 1.2em;
+}
+
+
+
+h3 {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+.sub_title {
+  font-family: 'Oswald', sans-serif;
+}
+
+.Burgercolor {
+  background-image: linear-gradient(to right, rgb(177, 95, 250), rgb(95, 144, 252));
+}
+
+
+
+img {
+  transition: transform .8s ease-in-out;
+  
+}
+
+#wa:hover {
+  transform: rotate(360deg);
+}
+
+.w3-bar-item:hover {
+  filter: brightness(70%);
+}
+
+.Burger {
+  background-color: rgba(177, 95, 250, 0);
+}
+
+.w3-xlarge:hover {
+  background-color:rgba(52, 57, 255, 0.6);
+}
+
+.links {
+  border: 2px solid rgb(131, 255, 232);
+  border-radius: 5px;
+  margin: 1em;
+  box-shadow: 0.5em 0.5em .5em rgba(186, 186, 186, 0.65);
+  padding: 1em;
+  background-color: rgba(145, 143, 143, 0.21);
+}
+
+.links:hover {
+  background-color: rgba(66, 66, 66, 0.31);
+  border-color: rgb(106, 226, 203);
+}
+
+.links:active {
+  background-color: rgba(145, 143, 143, 0.21);
+}
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Uncial Antiqua', cursive;
+font-family: 'Lobster', cursive;
+*/

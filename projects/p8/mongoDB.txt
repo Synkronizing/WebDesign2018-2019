@@ -1,0 +1,50 @@
+## mongoimport
+
+compsci@compsci-VBox:~$ mongoimport --host localhost --db animals --collection dogs --file /home/compsci/json/animals.json
+
+
+## mongoimport for arrays:
+
+compsci@compsci-VBox:~$ mongoimport --host localhost --db animals --collection dogs --file /home/compsci/json/animalsArray.json --jsonArray
+
+## OR
+
+> db.dogs.find(
+... {$or:[{name:"Sam"},{age:3}]},
+... {_id:0,name:1,age:1}
+... )
+{"name" : "Sam", "age : 3}
+
+## Query to find animals between 5-10 inclusive, excluding tricks and _id from the results
+
+> db.dogs.find({"age":{$gte:5,$lte:10}},{tricks:null,_id:null}).pretty()
+{ "name" : "Gambit", "age" : 9 }
+{ "name" : "Tigger", "age" : 10 }
+{ "name" : "Happy", "age" : 9 } 
+
+
+## Query to find 
+db.dogs.find({},{})
+
+> db.dogs.find({name:/.+o.+/,age:{$lt:9}},{age:1,_id:0,name:1})
+
+
+> db.dogs.find({$and:[{age:{$lte:8}},{tricks:"sit"}]},{_id:0,name:1,age:1,tricks:1})
+
+
+## To update a specific dog
+db.dogs.updateOne({"name":"Coco"},{$set:{tricks:["sit"]}})
+
+## Push adds to the array
+> db.dogs.updateOne({name:"Tigger"},{$push:{tricks:"speak"}})
+
+##Pull removes specific things from array
+> db.dogs.updateOne({name:"Pookie"},{$pull:{tricks:"sit"}})
+
+###Updates all of same thing
+db.dogs.updateMany({},{})
+
+## How to remove an object
+> db.dogs.remove({name:"Fiona"})
+
+

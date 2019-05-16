@@ -11,6 +11,8 @@
     <title>DOM-inator</title>
 </head>
 <body >
+    
+    
         <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
                 <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
                 <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
@@ -18,11 +20,13 @@
                 <a href="../../index.html" class="w3-bar-item w3-button">My HomePage</a>
               </div>
               <button id="openNav" class="w3-button Burger w3-xlarge" style="background-color: #00000000" onclick="w3_open()">☰</button>
+              <div id="wrap">
+                  <h1 style= "text-align: center">DOM-INATOR / Josh S / May 14 2019</h1>
     <div class="card bg-dark m-auto w-75">
         <h5 class="card-header text-light">
             <span class="h1 text-warning font-italic mr-2">JavaScript</span>
             DOM-INATOR
-            <span class="btn btn-sm btn-danger float-right">X</span>
+            <span class="btn btn-sm btn-danger float-right" onClick="hide_Ele()">X</span>
         </h5>
         <div class="card-body row">
             <div class="input-group">
@@ -34,10 +38,38 @@
             </div>
             <div class="btn-group">
                 <span class="btn btn-warning" onClick="create_Ele()">Create New Element</span>
-                <span class="btn btn-danger">Remove Lost Element</span>
-                <span class="btn btn-outline-secondary">Reset</span>
+                <span class="btn btn-danger" onClick="remove_Ele()">Remove Lost Element</span>
+                <span class="btn btn-outline-secondary" onClick="reset()">Reset</span>
             </div>
         </div>
+    </div>
+</div>
+    <div style ="background-color:#eeeeeeaa">
+    <hr class="my-4">
+    <div id="page"></div>
+    <hr class="my-4">
+</div>
+    <div class="explain">
+    <h1>Explaination</h1>
+    <h2>Each button has a function attached to them creating an interaction on the page.</h2>
+    <h2>After clicking create new element it takes the tagname (h3, div, a, etc) along with the class, id and innerHTML and creates a object directly on the page</h2>
+    <h2>parent id allows you to put an object into a div with a specific id already attached to it.</h2>
+    <a href="images/create.png"><img src="images/create.png" alt=""></a>
+    <h2>Remove last Element button does exactly what it says it does and removes the last element</h2>
+    <a href="images/remove.png"><img src="images/remove.png" alt=""></a>
+    <h2>Reset sets all the boxes with a for loop to be blank</h2>
+    <a href="images/reset.png"><img src="images/reset.png" alt=""></a>
+    <h2>the X on the right when clicked will hide the panel and add a button that shows the panel again and hides the show button.</h2>
+    <a href="images/hide.png"><img src="images/hide.png" alt=""></a>
+    <br>
+    <a href="images/show.png"><img src="images/show.png" alt=""></a>
+    </div>
+    <div class="explain">
+        <h1>Example</h1>
+        <h2>Enter div for the tagName, something like "border border-danger" in the className to use bootstrap borders, then enter example for id and text like hello world just to have something in the div. Then click create New Element</h2>
+        <h2>Now enter h3 for the tagName, Enter text such as "This is an h3 in a div, then enter example in the parent id box. Finally create New Element and you will see the h3 inside the div</h2>
+    <a href="images/Hello_dom.png"><img src="images/Hello_dom.png" alt=""></a>
+    <a href="images/h3Div.png"><img src="images/h3Div.png" alt=""></a>
     </div>
     <script src="js/dom.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">

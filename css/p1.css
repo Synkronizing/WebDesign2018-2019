@@ -1,0 +1,222 @@
+.violin {
+  background-image: url(../images/Backgrounds/violin.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(138, 63, 196);
+}
+
+.mount {
+  background-image: url(../images/Backgrounds/mountains.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(80, 247, 172);
+}
+
+.flower {
+  background-image: url(../images/Backgrounds/flower.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(5, 138, 138);
+}
+
+.comp {
+  background-image: url(../images/Backgrounds/computer.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(154, 40, 73);
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(63, 161, 187), rgb(102, 200, 255));
+}
+
+.title {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: part1;
+}
+
+.item3 {
+  grid-area: part2;
+}
+
+.item4 {
+  grid-area: part3
+}
+
+.item5 {
+  grid-area: part4;
+}
+
+.item6 {
+  grid-area: part5;
+}
+
+.item7 {
+  grid-area: part6;
+}
+
+.item8 {
+  grid-area: soft;
+}
+.flip, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7{
+  cursor: pointer;
+}
+.flip:hover, .flip2:hover, .flip3:hover, .flip4:hover, .flip5:hover, .flip6:hover, .flip7:hover{
+  color:rgb(255, 255, 255);
+}
+.open, .open2, .open3, .open4, .open5, .open6, .open7{
+  display:none;
+}
+@media screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas:
+      "... header header header "
+      "soft part1 part1 part1 "
+      "soft part2 part2 part2"
+      "soft part3 part3 part3"
+      "soft part4 part4 part4"
+      "soft part5 part5 part5"
+      "soft part6 part6 part6";
+  }
+
+  img {
+    width: 45%;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:10px;
+  }
+  a:hover{
+    filter:drop-shadow(10px 8px 5px #777676c4)
+  }
+  li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+  }
+
+  .pic {
+    text-align: center;
+  }
+
+  .click {
+    font-family: 'Notable', sans-serif;
+    font-size: .8em;
+  }
+
+  .grid-container>div {
+    text-align: center;
+  }
+
+  .sub-title {
+    font-family: 'Acme', sans-serif;
+    font-size: 3em;
+  }
+
+  .list {
+    font-family: 'Bitter', serif;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "soft"
+      "part1 "
+      "part2"
+      "part3"
+      "part4"
+      "part5"
+      "part6";
+  }
+
+  img {
+    width: 90%;
+  }
+
+  li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+  }
+
+  .pic {
+    text-align: center;
+  }
+
+  .click {
+    font-family: 'Notable', sans-serif;
+    font-size: .8em;
+  }
+
+  .grid-container>div {
+    text-align: center;
+  }
+
+  .sub-title {
+    font-family: 'Acme', sans-serif;
+    font-size: 2em;
+  }
+
+  .list {
+    font-family: 'Bitter', serif;
+    font-size: 1.6em;
+  }
+}
+
+.Burgercolor {
+  background-image: linear-gradient(to right, rgb(177, 95, 250), rgb(95, 144, 252));
+}
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Uncial Antiqua', cursive;
+font-family: 'Lobster', cursive;
+
+font-family: 'Notable', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Chicle', cursive;
+font-family: 'Bitter', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Acme', sans-serif;
+font-family: 'Abril Fatface', cursive;
+*/

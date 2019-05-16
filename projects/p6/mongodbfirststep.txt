@@ -1,0 +1,407 @@
+Install MongoDB from the repo -- sudo apt install mongodb
+
+$ mongod --version // notice mongod you are checking the daemon
+
+$ npm install mongodb // install node drive for MongoDB
+
+<----------------------- Create MongoDB database ----------------------->
+Create a test program to create a MongoDB database
+create a file named demo_create_mongodb.js
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/mydb";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  console.log("Database created!");
+  db.close();
+});
+
+> node demo_create_mongodb.js
+
+Database created!
+compsci@compsci-VBox:~/MERN/mongodb_test$
+
+<----------------------- Node.js MongoDB Create Collection ----------------------->
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("mydb");
+  dbo.createCollection("customers", function(err, res) {
+    if (err) throw err;
+    console.log("Collection created!");
+    db.close();
+  });
+});
+
+Save the code above in a file called "demo_mongodb_createcollection.js" and run the file:
+
+>node demo_mongodb_createcollection.js
+
+Collection created!
+compsci@compsci-VBox:~/MERN/mongodb_test$ 
+
+
+<----------------------- Insert into the Collection ----------------------->
+
+create a txt file:
+demo_mongodb_insert_multiple.js
+
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("mydb");
+  var myobj = [
+    { name: 'John', address: 'Highway 71'},
+    { name: 'Peter', address: 'Lowstreet 4'},
+    { name: 'Amy', address: 'Apple st 652'},
+    { name: 'Hannah', address: 'Mountain 21'},
+    { name: 'Michael', address: 'Valley 345'},
+    { name: 'Sandy', address: 'Ocean blvd 2'},
+    { name: 'Betty', address: 'Green Grass 1'},
+    { name: 'Richard', address: 'Sky st 331'},
+    { name: 'Susan', address: 'One way 98'},
+    { name: 'Vicky', address: 'Yellow Garden 2'},
+    { name: 'Ben', address: 'Park Lane 38'},
+    { name: 'William', address: 'Central st 954'},
+    { name: 'Chuck', address: 'Main Road 989'},
+    { name: 'Viola', address: 'Sideway 1633'}
+  ];
+  dbo.collection("customers").insertMany(myobj, function(err, res) {
+    if (err) throw err;
+    console.log("Number of documents inserted: " + res.insertedCount);
+    db.close();
+  });
+});
+
+$ node demo_mongodb_insert_multiple.js
+
+Number of documents inserted: 14
+compsci@compsci-VBox:~/MERN/mongodb_test$ 
+
+
+<----------------------- Mongo Commandline ----------------------->
+
+type in "mongo" to enter the mongo shell
+
+"show dbs" or "show databases" shows all databases in mongodb
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+mydb    0.000GB
+testdb  0.000GB
+> 
+to create or enter adatabase you must type:
+> use weddb;
+returning with:
+
+switched to db weddb
+
+/////////////////////////////////////////////
+"[]" = array
+"{}" = object
+{
+first_name:"John",
+last_name:"Doe",
+memberships["menu1", "menu2"],
+address:{
+        street:"4 main st",
+        city:"Boston"
+
+}
+contacts
+    [  
+        {name:"Brad", relationship:"friend"}
+    ]
+}
+////////////////////////////////////////////
+
+db.createUser({
+    user:"brad",
+    pwd:"1234",
+    roles:["readWrite","dbAdmin"]
+});
+
+the command line displays:
+Successfully added user: { "user" : "brad", "roles" : [ "readWrite", "dbAdmin" ] }
+
+Then to create a collection and insert info into it:
+
+> db.createCollection("customers");
+{ "ok" : 1 }
+> show collections
+customers
+> db.customers.insert({first_name:"Josh",last_name:"Sutton"});
+WriteResult({ "nInserted" : 1 })
+
+// you can add new fields to your customers halfway through 
+db.customers.insert([{first_name:"Steven",last_name:"Smith"},{first_name:"Joan",last_name:"Johnson",gender:"female"}]);
+
+it will return with:
+BulkWriteResult({
+	"writeErrors" : [ ],
+	"writeConcernErrors" : [ ],
+	"nInserted" : 2,
+	"nUpserted" : 0,
+	"nMatched" : 0,
+	"nModified" : 0,
+	"nRemoved" : 0,
+	"upserted" : [ ]
+})
+
+If you want to use find() and have it look cleaner use:
+
+> db.customers.find().pretty()
+
+it will return with:
+{
+	"_id" : ObjectId("5bec5bcd5e7a6a39452ad5d6"),
+	"first_name" : "Josh",
+	"last_name" : "Sutton"
+}
+{
+	"_id" : ObjectId("5bec5d12dec6d61e43d1c9b0"),
+	"first_name" : "Steven",
+	"last_name" : "Smith"
+}
+{
+	"_id" : ObjectId("5bec5d12dec6d61e43d1c9b1"),
+	"first_name" : "Joan",
+	"last_name" : "Johnson",
+	"gender" : "female"
+}
+///////////////////////////////////////////////////
+To change or add something to a specific customer use:
+
+> db.customers.update({first_name:"Steven"},{first_name:"John",last_name:"Doe",gender:"male"});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+Now if you type db.customers.find().pretty() instead of showing
+{
+	"_id" : ObjectId("5bec5d12dec6d61e43d1c9b0"),
+	"first_name" : "Steven",
+	"last_name" : "Smith"
+}
+it will show
+{
+	"_id" : ObjectId("5bec5d12dec6d61e43d1c9b0"),
+	"first_name" : "John",
+	"last_name" : "Doe",
+	"gender" : "male"
+}
+
+
+
+To either add or change a specific variable with a customer use the code $set like this:
+> db.customers.update({first_name:"Josh"},{$set:{gender:"male"}});
+
+it should return with this:
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+{
+	"_id" : ObjectId("5bec5bcd5e7a6a39452ad5d6"),
+	"first_name" : "Josh",
+	"last_name" : "Sutton",
+	"gender" : "male"
+}
+and after doing "db.customers.find().pretty()" it will add the gender variable to Josh
+
+//////////////////////////////////////////////////////////////////
+>db.customers.update({first_name:"John"},{$set:{age:45}});
+this code will create a new variable or change the age variable of John to 45
+>db.customers.update({first_name:"John"},{$inc:{age:5}});
+to increase the age by 5 use $inc
+>db.customers.update({first_name:"John"},{$unset:{age:1}});
+this code removes age from John
+
+/////////////////////////////////////////////////////////////////
+If you try to update a customer that doesn't exist it wont show an error it will show that nothing matched
+> db.customers.update({first_name:"Mary"},{first_name:"Mary",last_name:"Samson"});
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+
+
+Now if you want to add a customer using update then you can add upsert at the end
+> db.customers.update({first_name:"Mary"},{first_name:"Mary",last_name:"Samson"},{upsert:true});
+//And it will display
+WriteResult({
+	"nMatched" : 0,
+	"nUpserted" : 1,
+	"nModified" : 0,
+	"_id" : ObjectId("5beef752bc81af06bfc80909")
+})
+now if you do db.customers.find().pretty() it will display a new customer
+{
+	"_id" : ObjectId("5beef752bc81af06bfc80909"),
+	"first_name" : "Mary",
+	"last_name" : "Samson"
+}
+/////////////////////////////////////////////////////////////////
+To change the name of a specific variable use $rename like this:
+>db.customers.update({first_name:"John"},{$rename:{"gender":"sex"}});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+now to remove a person do 
+>db.customers.remove({first_name:"Joan"});
+WriteResult({ "nRemoved" : 1 })
+//////////////////////////////////////////////////////////////////
+db.customers.insert([{
+        first_name:"Troy",
+        last_name:"Makons",
+        gender:"male",
+        age:33,
+        address:{
+            street:"432 Essex st",
+            city:"Lawrence",
+            state:"MA"
+        },
+        memberships:["mem1","mem2"],
+        balance:125.32
+    }, {
+        first_name:"Beth",
+        last_name:"Jenkins",
+        gender:"female",
+        age:23,
+        address:{
+            street:"411 Blue st",
+            city:"Boston",
+            state:"MA"
+        },
+        memberships:["mem2","mem1"],
+        balance:505.33
+    }, {
+        first_name:"William",
+        last_name:"Jackson",
+        gender:"male",
+        age:43,
+        address:{
+            street:"11 Albany st",
+            city:"Boston",
+            state:"MA"
+        },
+        memberships:["mem1","mem2"],
+
+        balance:333.23
+    }, {
+        first_name:"Sharon",
+        last_name:"Thompson",
+        gender:"female",
+        age:34,
+        address:{
+            street:"19 Willis st",
+            city:"Worchester",
+            state:"MA"
+        },
+        memberships:["mem1","mem2"],
+        balance:99.99
+    }
+]);
+///////////////////////////////////////////////////////////////////////////
+
+>mongo some_Javascript_file.js
+this executes javascript with mongodb code
+
+>mongo --help
+brings up help manul while in mongo shell
+
+JSON = Javascript Object Notation
+
+Operator      Meaning
+$eq           equals to
+$ne           not equal to
+$lt           less than
+$lte          less than or equal to
+$qt           greater than
+$qte          greater than or equal to
+$
+
+
+example of JSON in USE(Query)
+db.products.find(
+    {
+        price:{$gt:"2",$lt:"8"},      \ -Filter
+        title:/chocolate/i            /
+    },
+    {
+        _id:0,description:0          - Projection(0 makes the data not show up, 1 shows)
+    }
+).sort({sku:1});                    - Cursor Modifier
+//////////////////////////////////////////////////////////////////////////////////
+start mongodb in terminal with "mongo"
+use sweetscomplete; (create a new database)
+
+
+
+db.products.insert([{
+        sku:"C21000",
+        title:"Chocolate Eclair",
+        description:"This chocolate pastry contains cream in the center serving one person, but it is hard to only have one.",
+        price:"2.10"
+    }, {
+        sku:"C22000",
+        title:"Chocolate Toaster Tarts",
+        description:"A toasted chocolate poptart covered with chocolate syrup, serving one person.",
+        price:"2.20"
+    }, {
+        sku:"C30000",
+        title:"Chocolate Mousse",
+        description:"A very light and creamy chocolate sweet, serving up to 2 people.",
+        price:"3.00"
+    }, {
+        sku:"C32000",
+        title:"Chocolate Fondue",
+        description:"several strawberries and marshmellows covered in melted chocolate serving up to 2 people.",
+        price:"3.20"
+    }, {
+        sku:"C61000",
+        title:"Chocolate Layer Cake",
+        description:"This chocolate cake contains 3 layers alternating between milk and dark chocolate, it is covered in a light tasting frosting and there is room on the top for designs.",
+        price:"6.10"
+    }, {
+        sku:"M43000",
+        title:"Mint Chocolate Milk Shake",
+        description:"This delicious 12 oz milk shake serves one person.",
+        price:"4.30"
+    }, {
+        sku:"D29000",
+        title:"Dark Chocolate Swirl",
+        description:"This dark chocolate pudding serves 1 person.",
+        price:"1.55"
+    }, {
+        sku:"D29000",
+        title:"Triple chocolate fudge",
+        description:"This amazing fudge has three different chocolates including dark, milk and white chocolate. It serves up to 4 person.",
+        price:"8.54"
+    }, {
+        sku:"C89000",
+        title:"chocolate macaroons",
+        description:"This chocolate cookie originates from France and serves 1 person.",
+        price:"1.61"
+    }, {
+        sku:"C45000",
+        title:"Chocolate Cheesecake",
+        description:"This fantastic cheescake can serve up to 8 people. Allows for words or designs on the top.",
+        price:"10.99"
+    }]);
+
+db.products.find().pretty()
+
+db.products.find({price:{$gt:"2",$lt:"8"}}).sort({sku:1}).pretty();
+
+
+
+
+
+
+
+
+
+
+
+
+

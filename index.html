@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <title>Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Oswald|Playfair+Display|Roboto+Mono|Roboto+Slab|Titillium+Web|Uncial+Antiqua"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/w3.css">
+
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function w3_open() {
+
+        document.getElementById("mySidebar").style.width = "200px";
+        document.getElementById("mySidebar").style.display = "block";
+
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+      }
+    </script>
+    <script src="js/time.js"></script>
+</head>
+
+<body class="mount" onload="renderTime();">
+  <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="http://westada.tech/b2/perryk" class="w3-bar-item w3-button">Perry K</a>
+    <a href="http://westada.tech/b2/josephm" class="w3-bar-item w3-button">Joseph M</a>
+  </div>
+  <div class="grid-container">
+    <div class="item1">
+      <h1 id="title">My Portfolio created by Josh S</h1>
+      
+    </div>
+    <div class="item7"><div id="clockDisplay" class="clockContainer"></div></div>
+    <div class="item2">
+      <!-- Sidebar -->
+
+
+      <button cid="openNav" class="w3-button Burger w3-xlarge" onclick="w3_open()">☰</button>
+      <br>
+      <a href="http://westada.org" target="_blank"><img id="wa" src="images/logos/westada_blue-01_1.png" alt="WestAda"></a>
+      <br>
+      <a href="http://westada.org/chs" target="_blank"><img id="wa" src="images/logos/logo_centennial-04.png" alt="Centennial"></a>
+      <br>
+      <a href="http://www.boisestate.edu" target="_blank"><img id="wa" src="images/logos/boise_state.png" alt="Boise State"></a>
+
+    </div>
+
+    <div class="item3">
+      <h1 class="sub_title ">Links to my DB Projects</h1>
+      <a href="projects/github/index.html">
+        <div class="links">
+          <h3>P17. GitHub</h3>
+        </div>
+      </a>
+      <a href="projects/DOM-inator/index.html">
+        <div class="links">
+          <h3>P16. DOM-inator</h3>
+        </div>
+      </a>
+      <a href="projects/DOM-time/index.html">
+        <div class="links">
+          <h3>P15. DOM Clock</h3>
+        </div>
+      </a>
+      <a href="projects/react-tutorial/public/index.html">
+        <div class="links">
+          <h3>P14. React tutorial file (Work in Progress)</h3>
+        </div>
+      </a>
+      <a href="projects/taniaReact/index.html">
+        <div class="links">
+          <h3>P13. Learning React</h3>
+        </div>
+      </a>
+      <a href="projects/react1/index.html">
+        <div class="links">
+          <h3>P12. React with CodeSandBox</h3>
+        </div>
+      </a>
+      <a href="projects/p11/p11.html">
+        <div class="links">
+          <h3>P11. Postman with Mongoose</h3>
+        </div>
+      </a>
+      <a href="projects/p10/p10.html">
+        <div class="links">
+          <h3>P10. RegEx Crossword Explained</h3>
+        </div>
+      </a>
+      <a href="projects/p9/p9.html">
+        <div class="links">
+          <h3>P9. Mongoose Schema and Express</h3>
+        </div>
+      </a>
+      <a href="projects/p8/p8.html">
+        <div class="links">
+          <h3>P8. MongoDB RegEx</h3>
+        </div>
+      </a>
+      <a href="projects/p7/p7.html">
+        <div class="links">
+          <h3>P7. MongoDB customer database</h3>
+        </div>
+      </a>
+      <a href="projects/p6/p6.html">
+        <div class="links">
+          <h3>P6. Node MongoDB testing Docs</h3>
+        </div>
+      </a>
+      <a href="projects/p5/p5.html">
+        <div class="links">
+          <h3>P5. Node MySQL Inner Joins</h3>
+        </div>
+      </a>
+      <ul>
+        <li>I was inspired and helped by <a class="inspire" href="http://westada.tech/b2/perryk">Perry K</a> and <a
+            class="inspire" href="http://westada.tech/b2/josephm">Joseph M</a></li>
+      </ul>
+
+      <a href="projects/p4/p4.html">
+        <div class="links">
+          <h3>P4. Node MYSQL Create Tables w/ Entries</h3>
+        </div>
+      </a>
+
+      <a href="projects/p3/p3.html">
+        <div class="links">
+          <h3>P3. Installing and testing Node and npm</h3>
+        </div>
+      </a>
+
+      <div class="links">
+        <a href="projects/p2/p2.html">
+          <h3>P2. Installing MySQL, MyPHPAdmin, and MySQL Workbench</h3>
+        </a>
+      </div>
+
+      <a href="projects/p1/p1.html">
+        <div class="links">
+          <h3>P1. Create a Virtual Machine, install SW, backup offsite</h3>
+        </div>
+      </a>
+
+      <ul>
+        <li>I was assisted by <a class="inspire" href="http://westada.tech/a4/miked">Michael D</a> and <a class="inspire"
+            href="http://westada.tech/a4/calebp">Caleb P</a></li>
+      </ul>
+    </div>
+    <div class="item4">
+      <h1 class="sub_title">Links to my CS Java Projects</h1>
+      <a href="projects/p2/p002.jar">
+        <div class="links">
+          <h3>P2. Using Base Ten numbers and finding the dimension of a sphere </h3>
+        </div>
+      </a>
+
+      <a href="projects/p2/p002.jar">
+        <div class="links">
+          <h3>P1. Finding the dimensions of shapes</h3>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="item6">
+        <a href="projects/game/index.html">
+          <div class="links">
+            <h3>Balls Bouncing</h3>
+          </div>
+        </a>
+    </div>
+
+  </div>
+</body>
+
+</html>
